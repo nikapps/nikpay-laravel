@@ -1,0 +1,51 @@
+{
+    "name": "nikapps/nikpay-laravel",
+    "description": "A laravel 5 package for connecting to Iranian banks for payment transactions",
+    "keywords": [
+        "laravel",
+        "nikpay",
+        "shaparak",
+        "saman",
+        "pardakht",
+        "dargah",
+        "payment",
+        "bank",
+        "iran"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Borhani",
+            "email": "aliborhani1@gmail.com"
+        },
+        {
+            "name": "Hossein Moradgholi",
+            "email": "hossein@moradgholi.com"
+        }
+    ],
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nikapps/nikpay.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "ext-soap": "*",
+        "illuminate/support": "5.1.*",
+        "illuminate/config": "5.1.*",
+        "illuminate/contracts": "5.1.*",
+        "nikapps/nikpay": "~1.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nikapps\\NikPayLaravel\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
