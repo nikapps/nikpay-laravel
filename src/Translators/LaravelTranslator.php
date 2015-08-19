@@ -5,7 +5,6 @@ use Nikapps\NikPay\PaymentProviders\Translator;
 
 class LaravelTranslator implements Translator
 {
-
     /**
      * @var string
      */
@@ -14,9 +13,8 @@ class LaravelTranslator implements Translator
     /**
      * @param string $bank
      */
-    function __construct($bank)
+    public function __construct($bank)
     {
-
         $this->bank = strtolower($bank);
     }
 
@@ -25,6 +23,7 @@ class LaravelTranslator implements Translator
      * Translate/Describe error or state code
      *
      * @param string|integer $code
+     *
      * @return string|integer
      */
     public function translate($code)
@@ -41,6 +40,7 @@ class LaravelTranslator implements Translator
      *
      * @see $this::translate()
      * @param string|integer $code
+     *
      * @return string|integer
      */
     public function trans($code)
@@ -53,6 +53,7 @@ class LaravelTranslator implements Translator
      *
      * @see $this::translate()
      * @param string|integer $code
+     *
      * @return string|integer
      */
     public function describe($code)

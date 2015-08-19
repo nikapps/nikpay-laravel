@@ -6,7 +6,6 @@ use Nikapps\NikPayLaravel\NikPayFactory;
 
 class NikPay extends Facade
 {
-
     /**
      * Get the registered name of the component.
      *
@@ -16,4 +15,4 @@ class NikPay extends Facade
     {
         return NikPayFactory::class;
     }
-} 
+}

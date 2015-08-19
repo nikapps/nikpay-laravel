@@ -10,7 +10,6 @@ use Nikapps\NikPayLaravel\Translators\LaravelTranslator;
 
 class NikPayServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -25,12 +24,10 @@ class NikPayServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         $this->loadTranslationsFrom(__DIR__ . '/lang', 'nikpay');
 
         $this->setupConfig();
         $this->setupViews();
-
     }
 
     /**
@@ -40,7 +37,6 @@ class NikPayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $this->app->bind(SoapService::class, PhpSoapService::class);
 
         $this->registerSaman();
@@ -48,7 +44,6 @@ class NikPayServiceProvider extends ServiceProvider
         $this->app->singleton(NikPayFactory::class, function () {
             return new NikPayFactory();
         });
-
     }
 
     /**
@@ -81,6 +76,9 @@ class NikPayServiceProvider extends ServiceProvider
         ], 'views');
     }
 
+    /**
+     * Register saman classes to service container
+     */
     protected function registerSaman()
     {
         // Bind saman configuration
@@ -120,5 +118,4 @@ class NikPayServiceProvider extends ServiceProvider
     {
         return [NikPayFactory::class];
     }
-
 }

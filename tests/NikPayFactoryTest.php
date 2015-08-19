@@ -10,7 +10,6 @@ use Nikapps\NikPayLaravel\NikPayFactory as NikPay;
 
 class NikPayFactoryTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [NikPayServiceProvider::class];

@@ -8,7 +8,6 @@ use Nikapps\NikPayLaravel\NikPayFactory as NikPay;
 
 class LaravelTranslatorTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [NikPayServiceProvider::class];
@@ -44,7 +43,6 @@ class LaravelTranslatorTest extends TestCase
             $samanTranslator->translate(-3),
             'ورودیها حاوی کارکترهای ریرمجاز میباشند.'
         );
-
     }
 
     /**
@@ -58,6 +56,5 @@ class LaravelTranslatorTest extends TestCase
         $samanTranslator = app(NikPay::class)->translator('saman');
 
         $this->assertEquals($samanTranslator->translate(-2000), -2000);
-
     }
 }
