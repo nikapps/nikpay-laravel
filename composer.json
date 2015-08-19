@@ -39,7 +39,6 @@
     "nikapps/nikpay": "~1.0"
   },
   "require-dev": {
-    "phpspec/phpspec": "^2.2",
     "orchestra/testbench": "~3.1",
     "phpunit/phpunit": "~4.0"
   },
