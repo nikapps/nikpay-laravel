@@ -86,7 +86,7 @@ class NikPayServiceProvider extends ServiceProvider
         // Bind saman configuration
         $this->app->bind(SamanConfig::class, function ($app) {
 
-            $config = $app['config']->get('nikpay');
+            $config = $app['config']->get('nikpay.saman');
 
             return (new SamanConfig())
                 ->setGatewayUrl($config['webservice']['gateway'])
@@ -98,6 +98,10 @@ class NikPayServiceProvider extends ServiceProvider
                 ->setPassword($config['password'])
                 ->setUsername($config['username']);
 
+        });
+
+        $this->app->bind('nikapps:nikpay:saman:config', function () {
+            return app(SamanConfig::class);
         });
 
         $this->app->bind('nikapps:nikpay:saman', Saman::class);
