@@ -24,12 +24,6 @@
     }
   ],
   "type": "library",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/nikapps/nikpay.git"
-    }
-  ],
   "require": {
     "php": ">=5.5.9",
     "ext-soap": "*",
