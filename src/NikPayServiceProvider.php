@@ -95,7 +95,6 @@ class NikPayServiceProvider extends ServiceProvider
                 ->setMerchantId($config['merchant_id'])
                 ->setPassword($config['password'])
                 ->setUsername($config['username']);
-
         });
 
         $this->app->bind('nikapps:nikpay:saman:config', function () {
