@@ -25,16 +25,16 @@
   ],
   "type": "library",
   "require": {
-    "php": ">=5.5.9",
+    "php": ">=5.6",
     "ext-soap": "*",
-    "illuminate/support": "5.1.*|5.2.*",
-    "illuminate/config": "5.1.*|5.2.*",
-    "illuminate/contracts": "5.1.*|5.2.*",
-    "nikapps/nikpay": "~1.0"
+    "illuminate/support": "^5.1,<5.5",
+    "illuminate/config": "^5.1,<5.5",
+    "illuminate/contracts": "^5.1,<5.5",
+    "nikapps/nikpay": "^1.0.5"
   },
   "require-dev": {
-    "orchestra/testbench": "~3.1",
-    "phpunit/phpunit": "~4.0"
+    "orchestra/testbench": "~3.4",
+    "phpunit/phpunit": "~5.7"
   },
   "autoload": {
     "psr-4": {

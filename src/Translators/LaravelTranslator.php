@@ -26,12 +26,12 @@ class LaravelTranslator implements Translator
      *
      * @return string|integer
      */
-    public function translate($code)
+    public function translate($code, $locale = null)
     {
         return str_replace(
             "nikpay::{$this->bank}.",
             '',
-            trans("nikpay::{$this->bank}.$code")
+            trans("nikpay::{$this->bank}.$code", [], $locale)
         );
     }
 

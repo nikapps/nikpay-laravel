@@ -18,10 +18,10 @@ class LaravelTranslatorTest extends TestCase
      */
     public function it_should_translate_status_code()
     {
-        app('config')->set('app.locale', 'fa');
-
         /** @var LaravelTranslator $samanTranslator */
         $samanTranslator = app(NikPay::class)->translator('saman');
+
+        trans()->setLocale('fa');
 
         $this->assertEquals(
             $samanTranslator->translate('Canceled By User'),
@@ -34,10 +34,10 @@ class LaravelTranslatorTest extends TestCase
      */
     public function it_should_translate_error_code()
     {
-        app('config')->set('app.locale', 'fa');
-
         /** @var LaravelTranslator $samanTranslator */
         $samanTranslator = app(NikPay::class)->translator('saman');
+
+        trans()->setLocale('fa');
 
         $this->assertEquals(
             $samanTranslator->translate(-3),
@@ -50,8 +50,6 @@ class LaravelTranslatorTest extends TestCase
      */
     public function it_should_return_code_when_translation_is_not_available()
     {
-        app('config')->set('app.locale', 'fa');
-
         /** @var LaravelTranslator $samanTranslator */
         $samanTranslator = app(NikPay::class)->translator('saman');
 
